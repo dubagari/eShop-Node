@@ -4,13 +4,18 @@
   background: #0d0453;
 }
 
-.cartItems {
-  width: 50%;
+.cartItems-list {
   margin: 0 auto;
+  width: 50%;
+  border: 0.04rem solid #0d0453;
+}
+
+.cartItems {
+  margin: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: #666464 solid 0.05rem;
+  /* border: #666464 solid 0.05rem; */
   padding: 1rem 2rem;
 }
 .cartItems li {
