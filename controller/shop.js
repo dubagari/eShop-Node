@@ -65,13 +65,13 @@ exports.postCart = (req, res, next) => {
     });
 };
 
-// exports.postCartDelete = (req, res, next) => {
-//   const prod = req.body.productId;
-//   req.user
-//     .deleteItemFromCart(prod)
-//     .then((result) => {
-//       console.log(result);
-//       res.redirect("/cart");
-//     })
-//     .catch((err) => console.log(err));
-// };
+exports.postCartDelete = (req, res, next) => {
+  const prod = req.body.productId;
+  req.user
+    .deleteItemFromCart(prod)
+    .then((result) => {
+      console.log(result);
+      res.redirect("/cart");
+    })
+    .catch((err) => console.log(err));
+};

@@ -16,6 +16,6 @@ routes.get("/cart", shopController.getCart);
 
 routes.post("/cart", shopController.postCart);
 
-// routes.post("/cart-delete-items", shopController.postCartDelete);
+routes.post("/cart-delete-items", shopController.postCartDelete);
 
 module.exports = routes;
