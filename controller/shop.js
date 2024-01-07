@@ -75,3 +75,21 @@ exports.postCartDelete = (req, res, next) => {
     })
     .catch((err) => console.log(err));
 };
+
+exports.getOrders = (req, res, next) => {
+  res.render("shop/order", {
+    pageTitle: "orders",
+    path: "/orders",
+    // products: products,
+  });
+};
+
+exports.postOrders = (req, res, next) => {
+  req.user
+    .addOrder()
+    .then((result) => {
+      console.log(result);
+      res.redirect("/orders");
+    })
+    .catch((err) => console.log(err));
+};
