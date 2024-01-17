@@ -9,7 +9,7 @@ let _db;
 const mongoConnect = (callback) => {
   mongoClient
     .connect(
-      "mongodb+srv://abubakar:dubagari911@dubagari1.nmpipjp.mongodb.net/?retryWrites=true&w=majority"
+      "mongodb+srv://abubakar:dubagari@dubagari1.nmpipjp.mongodb.net/?retryWrites=true&w=majority"
     )
     .then((result) => {
       console.log("connected!!");

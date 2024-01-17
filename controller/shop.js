@@ -40,30 +40,30 @@ exports.getproductlis = (req, res, next) => {
     .catch((err) => console.log(err));
 };
 
-exports.getCart = (req, res, next) => {
-  req.user
-    .getCart()
-    .then((products) => {
-      res.render("shop/cart", {
-        pageTitle: "cart",
-        path: "/cart",
-        products: products,
-      });
-    })
-    .catch((err) => console.log(err));
-};
+// exports.getCart = (req, res, next) => {
+//   req.user
+//     .getCart()
+//     .then((products) => {
+//       res.render("shop/cart", {
+//         pageTitle: "cart",
+//         path: "/cart",
+//         products: products,
+//       });
+//     })
+//     .catch((err) => console.log(err));
+// };
 
-exports.postCart = (req, res, next) => {
-  const prodId = req.body.productId;
-  Product.findById(prodId)
-    .then((product) => {
-      return req.user.addToCart(product);
-    })
-    .then((result) => {
-      console.log(result);
-      res.redirect("/cart");
-    });
-};
+// exports.postCart = (req, res, next) => {
+//   const prodId = req.body.productId;
+//   Product.findById(prodId)
+//     .then((product) => {
+//       return req.user.addToCart(product);
+//     })
+//     .then((result) => {
+//       console.log(result);
+//       res.redirect("/cart");
+//     });
+// };
 
 exports.postCartDelete = (req, res, next) => {
   const prod = req.body.productId;
